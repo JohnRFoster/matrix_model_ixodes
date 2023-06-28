@@ -11,7 +11,7 @@
 #' @export
 
 ch_cary <- function(grid, path = ""){
-  file <- "/projectnb/dietzelab/fosterj/Data/Cary_mouse.csv"
+  file <- "Data/Cary_mouse.csv"
   
   dat <- read.csv(paste(path, file, sep = ""),
                   na.strings=c(c("", " ", "      "),"NA")) # read in data

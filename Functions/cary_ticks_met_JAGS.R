@@ -19,8 +19,8 @@ cary_ticks_met_JAGS <- function(sites = c("Green Control","Henry Control","Tea C
                                 state.interval=NULL){
   
   N_site <- length(sites)               # number of sites
-  raw.dat <- read.csv("Data/tick_cleaned")   # read in data  
-  met <- read.csv("Data/Cary_Met_Data_Daily.csv")
+  raw.dat <- read.csv("Data/Cary_tick.csv")   # read in data  
+  met <- read.csv("Data/Cary_weather.csv")
   
   raw.dat$DATE <- as.Date(raw.dat$DATE) # convert to date
   

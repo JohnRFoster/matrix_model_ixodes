@@ -145,7 +145,7 @@ process.error <- params %>% select(starts_with("sig"))
 model.params <- params %>% select(!starts_with("sig"))
 
 ## get dates
-tick.raw <- read_csv("../Data/tick_cleaned")
+tick.raw <- read_csv("../Data/Cary_ticks.csv")
 tick.actual <- tick.raw %>% 
   filter(Grid == paste(ticksFrom, "Control")) %>% 
   select(DATE, n_larvae, n_nymphs, n_adults)

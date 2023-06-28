@@ -7,7 +7,7 @@ nimble_data <- function(site.run){
   library(lubridate)
   library(tidyverse
           )
-  raw.dat <- read.csv("Data/tick_cleaned")   # read in data  
+  raw.dat <- read.csv("Data/Cary_ticks.csv")   # read in data  
   
   df <- raw.dat %>% 
     as_tibble() %>% 
@@ -27,7 +27,7 @@ nimble_data <- function(site.run){
   df <- as.numeric(diff(df$DATE))
   dt.index <- c(1, cumsum(c(df, 0)))
   
-  met <- read.csv("Data/Cary_Met_Data_Daily.csv")
+  met <- read.csv("Data/Cary_weather.csv")
   met.df <- met %>% 
     as_tibble() %>% 
     mutate(DATE = mdy(DATE)) %>% 

@@ -25,7 +25,7 @@ mcmc_lam <- function(matrices){
   mean(r)  
 }
 
-ticks <- read_csv("Data/tick_cleaned")
+ticks <- read_csv("Data/Cary_ticks.csv")
 dates <- ticks %>% 
   filter(Grid == site.run) %>% 
   mutate(year = year(DATE)) %>% 

@@ -60,7 +60,7 @@ mice_estimated_jags <- function(site.run){
   mice.all.days.var <- apply(mice.sort.all.days, 2, var)
   
   # tick data
-  dat <- read.csv("Data/tick_cleaned") # tick data
+  dat <- read.csv("Data/Cary_ticks.csv") # tick data
   tick <- dat[,c("Grid", "DATE", "n_larvae", "n_nymphs", "n_adults")]
   tick <- subset(tick, Grid == site.run)
   tick$DATE <- as.Date(tick$DATE)
